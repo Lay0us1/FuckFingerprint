@@ -37,7 +37,7 @@ func init() {
 	Logger.SetLevel(logrus.DebugLevel)
 
 	logPath, _ := os.Getwd()
-	logName := fmt.Sprintf("%s/FuckFingerprint_log_", logPath)
+	logName := fmt.Sprintf("%s/logs/FuckFingerprint_log_", logPath)
 	writer, _ := rotatelogs.New(logName + "%Y_%m_%d" + ".log")
 	lfHook := lfshook.NewHook(lfshook.WriterMap{
 		logrus.InfoLevel:  writer,

@@ -36,6 +36,11 @@ func Run(url string) (res []string, title string, err error) {
 
 	res = vscan.FingerScan(resp.Header, resp.Body, "", url)
 
+	if len(res) == 0 {
+		resp, _ := util.HttpRequset(url, "GET", "", true, config.DefaultHeader)
+		res = vscan.FingerScan(resp.Header, resp.Body, "", url)
+	}
+
 	url = strings.TrimRight(url, "/")
 
 	for k, v := range fingerPrints.AfrogFingerPrintMap {

@@ -31,7 +31,7 @@ func ParseArguments() Options {
 	flag.StringVar(&option.TargetFile, "f", "", "Targets. eg:t.txt")
 	flag.StringVar(&option.Proxy, "p", "", "http(s) proxy. eg: http://127.0.0.1:8080")
 	flag.StringVar(&option.Output, "o", "", "Output results to file.")
-	flag.BoolVar(&option.Global, "g", true, "Use online fingerprint")
+	flag.BoolVar(&option.Global, "g", false, "Use online fingerprint")
 	flag.Parse()
 
 	flag.Usage = func() {
