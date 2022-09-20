@@ -15668,8 +15668,7 @@
       "cms": "铭飞MCms",
       "method": "keyword",
       "location": "body",
-      "keyword": [
-        "Powered by MCms"
-      ]}
+      "keyword": ["Powered by MCms"]
+  }
   ]
 }

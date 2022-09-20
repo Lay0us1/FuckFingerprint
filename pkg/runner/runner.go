@@ -6,8 +6,8 @@ import (
 	"github.com/yhy0/FuckFingerprint/pkg/afrog"
 	"github.com/yhy0/FuckFingerprint/pkg/logging"
 	"github.com/yhy0/FuckFingerprint/pkg/util"
+	"net/url"
 	"os"
-	"strings"
 	"sync"
 )
 
@@ -66,17 +66,36 @@ func Run(options *Options) {
 		wg.Add(1)
 		limiter <- true
 
-		go func(url string) {
-			var t string
-			if !strings.Contains(url, "http://") && !strings.Contains(url, "https://") {
-				t = "http://" + url
+		go func(urlStr string) {
+			defer func() {
+				<-limiter
+				wg.Done()
+			}()
+			t, err := url.Parse(urlStr)
+			if err != nil {
+				logging.Logger.Error(err)
+				return
+			}
+			var httpTarget string
+
+			if t.Scheme == "" {
+				httpTarget = "http://" + urlStr
+			} else {
+				httpTarget = urlStr
 			}
 
-			res, title, err := afrog.Run(t)
+			res, title, err := afrog.Run(httpTarget)
 
 			if len(res) == 0 && title == "" {
-				t = "https://" + url
-				res, title, err = afrog.Run(t)
+				if t.Scheme == "http" {
+					httpTarget = "https://" + t.Host
+				} else if t.Scheme == "https" {
+					httpTarget = "http://" + t.Host
+				} else {
+					httpTarget = "https://" + urlStr
+				}
+
+				res, title, err = afrog.Run(httpTarget)
 				if f != nil && err == nil {
 					f.WriteString(fmt.Sprintf("%s %s %v\n", target, title, res))
 				}
@@ -85,9 +104,6 @@ func Run(options *Options) {
 					f.WriteString(fmt.Sprintf("%s %s %v\n", target, title, res))
 				}
 			}
-
-			<-limiter
-			wg.Done()
 		}(target)
 
 	}
