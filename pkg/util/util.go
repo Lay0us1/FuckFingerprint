@@ -4,6 +4,10 @@ import (
 	"bytes"
 	"encoding/base64"
 	"github.com/spaolacci/murmur3"
+	"golang.org/x/text/encoding/korean"
+	"golang.org/x/text/encoding/simplifiedchinese"
+	"golang.org/x/text/transform"
+	"io/ioutil"
 	"strings"
 )
 
@@ -64,4 +68,20 @@ func InsertInto(s string, interval int, sep rune) string {
 	}
 	buffer.WriteRune(sep)
 	return buffer.String()
+}
+
+// Decodegbk converts GBK to UTF-8
+func Decodegbk(s []byte) ([]byte, error) {
+	I := bytes.NewReader(s)
+	O := transform.NewReader(I, simplifiedchinese.GBK.NewDecoder())
+	d, e := ioutil.ReadAll(O)
+	if e != nil {
+		return nil, e
+	}
+	return d, nil
+}
+
+func DecodeKorean(s []byte) ([]byte, error) {
+	koreanDecoder := korean.EUCKR.NewDecoder()
+	return koreanDecoder.Bytes(s)
 }

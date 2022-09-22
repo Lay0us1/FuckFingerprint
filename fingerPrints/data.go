@@ -7,6 +7,7 @@ import (
 	"github.com/yhy0/FuckFingerprint/pkg/config"
 	"github.com/yhy0/FuckFingerprint/pkg/logging"
 	"github.com/yhy0/FuckFingerprint/pkg/util"
+	"time"
 )
 
 /**
@@ -51,6 +52,40 @@ type AfrogFingerPrint struct {
 	Keyword        []string          `json:"keyword"`
 	FaviconHash    []string          `json:"favicon_hash"`
 	Priority       int               `json:"priority"`
+}
+
+func New() {
+	NewEHoleFinger()
+	NewLocalFinger()
+	NewAfrogFinger()
+}
+
+// Update 每天凌晨更新
+func Update() {
+	for {
+		now := time.Now()
+		// 计算下一个零点
+		next := now.Add(time.Hour * 24)
+		next = time.Date(next.Year(), next.Month(), next.Day(), 0, 0, 0, 0, next.Location())
+		t := time.NewTimer(next.Sub(now))
+		<-t.C
+
+		err := GetEHoleFingerDataOnline()
+		if err != nil {
+			logging.Logger.Warnln("Use default data(EHoleFinger)")
+			NewEHoleFinger()
+		}
+		err = GetLocalFingerDataOnline()
+		if err != nil {
+			logging.Logger.Warnln("Use default data(LocalFinger)")
+			NewLocalFinger()
+		}
+		err = GetAfrogFingerDataOnline()
+		if err != nil {
+			logging.Logger.Warnln("Use default data(AfrogFinger)")
+			NewAfrogFinger()
+		}
+	}
 }
 
 // NewEHoleFinger 只加载一次，聚合 path, 减少请求(为了集成到扫描器中考虑)

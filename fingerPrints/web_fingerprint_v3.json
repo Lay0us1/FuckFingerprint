@@ -2655,7 +2655,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -2669,7 +2669,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -2684,7 +2684,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -2698,7 +2698,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -2712,7 +2712,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -2726,7 +2726,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -2740,7 +2740,7 @@
     "keyword": [],
     "favicon_hash": [],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -2754,7 +2754,7 @@
       "4644f2d45601037b8423d45e13194c93"
     ],
     "priority": 3,
-    "name": "apache-tomcat"
+    "name": "Apache Tomcat"
   },
   {
     "path": "/",
@@ -5425,7 +5425,7 @@
     "keyword": [],
     "favicon_hash": [],
     "priority": 3,
-    "name": "caucho-resin"
+    "name": "Caucho Resin"
   },
   {
     "path": "/",
@@ -18162,7 +18162,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "jboss"
+    "name": "Jboss"
   },
   {
     "path": "/",
@@ -18176,7 +18176,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "jboss"
+    "name": "Jboss"
   },
   {
     "path": "/",
@@ -18190,7 +18190,7 @@
     "keyword": [],
     "favicon_hash": [],
     "priority": 3,
-    "name": "jboss"
+    "name": "Jboss"
   },
   {
     "path": "/",
@@ -18204,7 +18204,7 @@
       "799f70b71314a7508326d1d2f68f7519"
     ],
     "priority": 3,
-    "name": "jboss"
+    "name": "Jboss"
   },
   {
     "path": "/",
@@ -18218,7 +18218,7 @@
     ],
     "favicon_hash": [],
     "priority": 2,
-    "name": "jboss-as"
+    "name": "Jboss-as"
   },
   {
     "path": "/",
@@ -18232,7 +18232,7 @@
     ],
     "favicon_hash": [],
     "priority": 2,
-    "name": "jboss-eap"
+    "name": "Jboss-eap"
   },
   {
     "path": "/",
@@ -18289,7 +18289,7 @@
     ],
     "favicon_hash": [],
     "priority": 1,
-    "name": "jeecms"
+    "name": "JeeCMS"
   },
   {
     "path": "/",
@@ -18303,7 +18303,7 @@
     ],
     "favicon_hash": [],
     "priority": 1,
-    "name": "jeecms"
+    "name": "JeeCMS"
   },
   {
     "path": "/",
@@ -18317,7 +18317,7 @@
     ],
     "favicon_hash": [],
     "priority": 1,
-    "name": "jeecms"
+    "name": "JeeCMS"
   },
   {
     "path": "/",
@@ -18417,7 +18417,7 @@
     "keyword": [],
     "favicon_hash": [],
     "priority": 3,
-    "name": "jenkins"
+    "name": "Jenkins"
   },
   {
     "path": "/",
@@ -18431,7 +18431,7 @@
       "23e8c7bd78e8cd826c5a6073b15068b1"
     ],
     "priority": 3,
-    "name": "jenkins"
+    "name": "Jenkins"
   },
   {
     "path": "/",
@@ -18445,7 +18445,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "jenkins"
+    "name": "Jenkins"
   },
   {
     "path": "/",
@@ -26707,7 +26707,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -26721,7 +26721,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -26735,7 +26735,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -26749,7 +26749,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -26763,7 +26763,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -26777,7 +26777,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -26791,7 +26791,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -26805,7 +26805,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "oracle-weblogic"
+    "name": "Weblogic"
   },
   {
     "path": "/",
@@ -34505,7 +34505,7 @@
     ],
     "favicon_hash": [],
     "priority": 2,
-    "name": "spring-framework"
+    "name": "Spring"
   },
   {
     "path": "/",
@@ -34519,7 +34519,7 @@
       "0488faca4c19046b94d07c3ee83cf9d6"
     ],
     "priority": 2,
-    "name": "spring-framework"
+    "name": "Spring"
   },
   {
     "path": "/",
@@ -36528,7 +36528,7 @@
     "keyword": [],
     "favicon_hash": [],
     "priority": 3,
-    "name": "thinkphp"
+    "name": "ThinkPHP"
   },
   {
     "path": "/",
@@ -36542,7 +36542,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "thinkphp"
+    "name": "ThinkPHP"
   },
   {
     "path": "/",
@@ -36556,7 +36556,7 @@
       "f49c4a4bde1eec6c0b80c2277c76e3db"
     ],
     "priority": 3,
-    "name": "thinkphp"
+    "name": "ThinkPHP"
   },
   {
     "path": "/",
@@ -36570,7 +36570,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "thinkphp"
+    "name": "ThinkPHP"
   },
   {
     "path": "/",
@@ -36585,7 +36585,7 @@
     ],
     "favicon_hash": [],
     "priority": 2,
-    "name": "thinkphp-yfcmf"
+    "name": "ThinkPHP-yfcmf"
   },
   {
     "path": "/",
@@ -36599,7 +36599,7 @@
     ],
     "favicon_hash": [],
     "priority": 2,
-    "name": "thinkphp-yfcmf"
+    "name": "ThinkPHP-yfcmf"
   },
   {
     "path": "/",
@@ -42502,7 +42502,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42516,7 +42516,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42530,7 +42530,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42544,7 +42544,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42558,7 +42558,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42573,7 +42573,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42587,7 +42587,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42601,7 +42601,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42615,7 +42615,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-seeyon-oa"
+    "name": "seeyon"
   },
   {
     "path": "/",
@@ -42729,7 +42729,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "yonyou-uclient"
+    "name": "用友NC"
   },
   {
     "path": "/",
@@ -46895,7 +46895,7 @@
     ],
     "favicon_hash": [],
     "priority": 3,
-    "name": "JEECMS"
+    "name": "JeeCMS"
   }
 
 ]

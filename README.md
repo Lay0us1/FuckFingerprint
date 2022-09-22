@@ -1,7 +1,7 @@
 # Web指纹识别工具
 
 <a href="https://github.com/yhy0/FuckFingerprint"><img alt="Release" src="https://img.shields.io/badge/go-1.18-blue"></a>
-<a href="https://github.com/yhy0/FuckFingerprint"><img alt="Release" src="https://img.shields.io/badge/release-v1.0.0-brightgreen"></a>
+<a href="https://github.com/yhy0/FuckFingerprint"><img alt="Release" src="https://img.shields.io/badge/release-v1.1.0-brightgreen"></a>
 <a href="https://github.com/yhy0/FuckFingerprint"><img alt="Release" src="https://img.shields.io/badge/LICENSE-GPL-important"></a>
 
 

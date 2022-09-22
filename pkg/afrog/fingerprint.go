@@ -3,16 +3,14 @@ package afrog
 import (
 	_ "embed"
 	"fmt"
-	"github.com/axgle/mahonia"
 	"github.com/logrusorgru/aurora"
 	"github.com/yhy0/FuckFingerprint/fingerPrints"
 	"github.com/yhy0/FuckFingerprint/pkg/config"
+	"github.com/yhy0/FuckFingerprint/pkg/honeypot"
 	"github.com/yhy0/FuckFingerprint/pkg/logging"
 	"github.com/yhy0/FuckFingerprint/pkg/util"
 	"github.com/yhy0/FuckFingerprint/pkg/vscan"
-	"regexp"
 	"strings"
-	"unicode/utf8"
 )
 
 // reference https://github.com/0x727/FingerprintHub
@@ -24,8 +22,6 @@ type Result struct {
 	Name       string // 指纹
 }
 
-var pTitle = regexp.MustCompile(`(?i:)<title>(.*?)</title>`)
-
 func Run(url string) (res []string, title string, err error) {
 	resp, err := util.HttpRequset(url, "GET", "", false, config.DefaultHeader)
 
@@ -34,11 +30,23 @@ func Run(url string) (res []string, title string, err error) {
 		return nil, "", err
 	}
 
-	res = vscan.FingerScan(resp.Header, resp.Body, "", url)
+	if honeypot.FuckHoneypot(resp.Body) {
+		res = append(res, "蜜罐")
+	}
 
-	if len(res) == 0 {
-		resp, _ := util.HttpRequset(url, "GET", "", true, config.DefaultHeader)
-		res = vscan.FingerScan(resp.Header, resp.Body, "", url)
+	title = util.ExtractTitle(resp)
+	res = vscan.FingerScan(resp.Header, resp.Body, title, url)
+
+	// todo 这里其实应该在上次都自动跳转的，但由于指纹不统一，有的是跳转后识别，有的跳转前就能识别，所以这里多次验证一下
+	if len(res) == 0 || resp.StatusCode == 302 || resp.Header.Get("Location") != "" {
+		respTmp, err := util.HttpRequset(url, "GET", "", true, config.DefaultHeader)
+
+		if err == nil {
+			resp = respTmp
+			res = append(res, vscan.FingerScan(resp.Header, resp.Body, "", url)...)
+			title = util.ExtractTitle(resp)
+		}
+
 	}
 
 	url = strings.TrimRight(url, "/")
@@ -49,7 +57,6 @@ func Run(url string) (res []string, title string, err error) {
 			target = url + k
 			resp, err = util.HttpRequset(target, "GET", "", false, nil)
 			if err != nil {
-				logging.Logger.Error("HttpRequset0 err: ", err)
 				continue
 			}
 		}
@@ -62,7 +69,6 @@ func Run(url string) (res []string, title string, err error) {
 			} else if strings.ToLower(fingerPrint.RequestMethod) == "get" && len(fingerPrint.RequestHeaders) != 0 {
 				resp, err = util.HttpRequset(target, "GET", "", false, nil)
 				if err != nil {
-					logging.Logger.Error("HttpRequset1 err: ", err)
 					continue
 				}
 
@@ -73,7 +79,6 @@ func Run(url string) (res []string, title string, err error) {
 			} else if strings.ToLower(fingerPrint.RequestMethod) == "post" && len(fingerPrint.RequestHeaders) == 0 {
 				resp, err = util.HttpRequset(target, strings.ToUpper(fingerPrint.RequestMethod), fingerPrint.RequestData, false, nil)
 				if err != nil {
-					logging.Logger.Error("HttpRequset2 err: ", err)
 					continue
 				}
 				if matching(resp, fingerPrint) {
@@ -83,7 +88,6 @@ func Run(url string) (res []string, title string, err error) {
 			} else {
 				resp, err = util.HttpRequset(target, strings.ToUpper(fingerPrint.RequestMethod), fingerPrint.RequestData, false, fingerPrint.RequestHeaders)
 				if err != nil {
-					logging.Logger.Error("HttpRequset3 err: ", err)
 					continue
 				}
 				if matching(resp, fingerPrint) {
@@ -92,16 +96,6 @@ func Run(url string) (res []string, title string, err error) {
 			}
 		}
 
-	}
-
-	titleArr := pTitle.FindStringSubmatch(resp.Body)
-	if titleArr != nil {
-		if len(titleArr) == 2 {
-			title = titleArr[1]
-			if !utf8.ValidString(title) {
-				title = mahonia.NewDecoder("gb18030").ConvertString(title)
-			}
-		}
 	}
 
 	res = util.RemoveDuplicateElement(res)

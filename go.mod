@@ -3,7 +3,6 @@ module github.com/yhy0/FuckFingerprint
 go 1.18
 
 require (
-	github.com/axgle/mahonia v0.0.0-20180208002826-3358181d7394
 	github.com/corpix/uarand v0.2.0
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/logrusorgru/aurora v2.0.3+incompatible
@@ -11,6 +10,8 @@ require (
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spaolacci/murmur3 v1.1.0
 	github.com/x-cray/logrus-prefixed-formatter v0.5.2
+	golang.org/x/net v0.0.0-20220722155237-a158d28d115b
+	golang.org/x/text v0.3.7
 )
 
 require (
@@ -24,5 +25,5 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90 // indirect
 	golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab // indirect
-	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
+	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 )

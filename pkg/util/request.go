@@ -51,15 +51,16 @@ func HttpRequset(urlstring string, method string, postdata string, isredirect bo
 	}
 
 	client := &http.Client{
-		Timeout:   time.Duration(10) * time.Second,
+		Timeout:   time.Duration(3) * time.Second,
 		Transport: tr,
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
-			return http.ErrUseLastResponse
+			return http.ErrUseLastResponse // 不进行重定向
 		}}
+
 	if isredirect {
 		jar, _ := cookiejar.New(nil)
 		client = &http.Client{
-			Timeout:   time.Duration(10) * time.Second,
+			Timeout:   time.Duration(3) * time.Second,
 			Transport: tr,
 			Jar:       jar,
 		}

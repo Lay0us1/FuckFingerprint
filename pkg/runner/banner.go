@@ -25,7 +25,7 @@ const banner = `
 `
 
 // Version is the current version of FuckFingerprint
-const Version = "1.0.2"
+const Version = "1.1.0"
 
 // showBanner is used to show the banner to the user
 func showBanner() {

@@ -54,9 +54,7 @@ func Run(options *Options) {
 			fingerPrints.NewAfrogFinger()
 		}
 	} else {
-		fingerPrints.NewEHoleFinger()
-		fingerPrints.NewLocalFinger()
-		fingerPrints.NewAfrogFinger()
+		fingerPrints.New()
 	}
 
 	wg := sync.WaitGroup{}

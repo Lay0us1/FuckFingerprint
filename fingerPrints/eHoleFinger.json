@@ -265,7 +265,7 @@
 	    "location": "body",
 	    "keyword": ["logo/images/ufida_nc.png","用友NC"]
 	}, {
-		"cms": "YONYOU NC",
+		"cms": "用友NC",
 		"method": "keyword",
 		"location": "body",
 		"keyword": ["uclient.yonyou.com", "UClient"]

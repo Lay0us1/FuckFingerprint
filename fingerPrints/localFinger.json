@@ -5980,22 +5980,22 @@
     "location": "body",
     "keyword": ["易族智汇javashop"]
   },{
-    "cms": "jboss",
+    "cms": "Jboss",
     "method": "keyword",
     "location": "body",
     "keyword": ["<a href=\"http://jboss.org\">"]
   },{
-    "cms": "jboss",
+    "cms": "Jboss",
     "method": "keyword",
     "location": "body",
     "keyword": ["jboss.css"]
   },{
-    "cms": "jboss-as",
+    "cms": "Jboss-as",
     "method": "keyword",
     "location": "body",
     "keyword": ["manage this jboss as instance"]
   },{
-    "cms": "jboss-eap",
+    "cms": "Jboss-eap",
     "method": "keyword",
     "location": "body",
     "keyword": ["<h3>your jboss enterprise application platform is running.</h3>"]
@@ -6005,17 +6005,17 @@
     "location": "body",
     "keyword": ["JeecgBoot","polyfill_"]
   },{
-    "cms": "jeecms",
+    "cms": "JeeCMS",
     "method": "keyword",
     "location": "body",
     "keyword": ["/r/cms/www/"]
   },{
-    "cms": "jeecms",
+    "cms": "JeeCMS",
     "method": "keyword",
     "location": "body",
     "keyword": ["/u/cms/www/"]
   },{
-    "cms": "jeecms",
+    "cms": "JeeCMS",
     "method": "keyword",
     "location": "body",
     "keyword": ["www.jeecms.com"]
@@ -11355,7 +11355,7 @@
     "location": "body",
     "keyword": ["spring boot admin"]
   },{
-    "cms": "spring-framework",
+    "cms": "Spring",
     "method": "keyword",
     "location": "body",
     "keyword": ["whitelabel error page"]
@@ -12060,22 +12060,22 @@
     "location": "body",
     "keyword": ["powered by thinkox"]
   },{
-    "cms": "thinkphp",
+    "cms": "ThinkPHP",
     "method": "keyword",
     "location": "body",
     "keyword": ["href=\"http://www.thinkphp.cn\">thinkphp</a>"]
   },{
-    "cms": "thinkphp",
+    "cms": "ThinkPHP",
     "method": "keyword",
     "location": "body",
     "keyword": ["thinkphp_show_page_trace"]
   },{
-    "cms": "thinkphp-yfcmf",
+    "cms": "ThinkPHP-yfcmf",
     "method": "keyword",
     "location": "body",
     "keyword": ["/public/others/maxlength.js","yfcmf"]
   },{
-    "cms": "thinkphp-yfcmf",
+    "cms": "ThinkPHP-yfcmf",
     "method": "keyword",
     "location": "body",
     "keyword": ["/yfcmf/yfcmf.js"]
@@ -14075,47 +14075,47 @@
     "location": "body",
     "keyword": ["href=\"clientfile/rmisupdate.exe"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["/seeyon/USER-DATA/IMAGES/LOGIN/login.gif"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["/seeyon/common/"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["M3 Server"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["M1-Server"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["/seeyon/user-data/images/login/login.gif"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyonseeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["seeyon","seeyonproductid"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["var _ctxpath = '/seeyon'"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["a8-v5企业版"]
   },{
-    "cms": "yonyou-seeyon-oa",
+    "cms": "seeyon",
     "method": "keyword",
     "location": "body",
     "keyword": ["/seeyon/"]
@@ -14155,7 +14155,7 @@
     "location": "body",
     "keyword": ["开启u8 cloud云端之旅"]
   },{
-    "cms": "yonyou-uclient",
+    "cms": "用友NC",
     "method": "keyword",
     "location": "body",
     "keyword": ["http-equiv=refresh content=0;url=index.jsp"]
@@ -15669,6 +15669,13 @@
       "method": "keyword",
       "location": "body",
       "keyword": ["Powered by MCms"]
-  }
+  }, {
+      "cms": "JeeCMS",
+      "method": "keyword",
+      "location": "header",
+      "keyword": [
+        "_site_id_cookie"
+      ]
+    }
   ]
 }
