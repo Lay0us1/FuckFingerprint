@@ -32,6 +32,7 @@ jobs:
         run: |
           go build -ldflags "-s -w" -o FuckFingerprint-Linux-x64 cmd/main.go
           chmod +x FuckFingerprint-Linux-x64
+        if: matrix.os == 'ubuntu-latest'
       - name: Build On Darwin
         run: |
           go build -ldflags "-s -w" -o FuckFingerprint-Darwin-x64 cmd/main.go
